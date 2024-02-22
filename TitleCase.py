@@ -1,6 +1,8 @@
 #Program to lowercase dealer entry of addresses and other text
 
 def main():
+
+    print()
     #Request input 
     dealer = input("Paste line: ")
 
@@ -9,12 +11,14 @@ def main():
 
     #Check if the title worked for the line or errored
     if entry.islower:
+        print("")
         print(entry)
+        print("")
 
-    else: print("ERROR: Please notify Theron if time allows")
+    else: print("ERROR: something broke *lenny shrug*")
     
 #Loop and Main
 while True:
     main()
-    if input("""Go again? (Y/N)""").strip().upper() != "Y":
+    if input("""Do you want to start again? (Y/N)""").strip().upper() != "Y":
         break
