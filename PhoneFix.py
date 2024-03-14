@@ -20,7 +20,6 @@ def main():
     #If decimal points were used, replace them with dashes
     entry = entry.replace(".", "-")
     
-    
     #This needs to be at the end to check for double dashes
     entry = entry.replace("--", "-")
     
