@@ -10,8 +10,28 @@ def main():
     #Maybe should look into making the area code removable regardless of location
     entry = phone.removeprefix("+1").strip()
 
+    #Check if input was only digits and format
+    if entry.isalnum():
+        l = len(entry)
+        print()
+
+        if l == 11:
+            print(l, "digits... Removing country code...")
+            print("Please review output for errors:")
+            print()
+            entry = entry.removeprefix("1")
+        
+        elif l > 11:
+            print("MORE DIGITS THAN EXPECTED, PLEASE REVIEW OUTPUT:")
+    
+    
+        print(""+entry[:3]+"-"+entry[3:6]+"-"+entry[6:])
+        print()
+
+        return
+
     #Removing parenthasis and adding dashes in correct spots
-    entry = entry.replace("(", "-").replace(")", "-").strip("-")
+    entry = entry.replace("(", "-").replace(")", "-")
 
     #This is for if they botched the parenthasis when typing
     #This is becoming a mess
@@ -19,9 +39,13 @@ def main():
     
     #If decimal points were used, replace them with dashes
     entry = entry.replace(".", "-")
+
+    #Remove spaces in between sets of numbers
+    #Somehow forgot to do this forever ago...
+    entry = entry.replace(" ", "-")
     
     #This needs to be at the end to check for double dashes
-    entry = entry.replace("--", "-")
+    entry = entry.replace("--", "-").strip("-")
     
     #Print the completed result
     print()
