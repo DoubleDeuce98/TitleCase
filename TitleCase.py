@@ -15,7 +15,7 @@ def main():
         print(entry)
         print("")
 
-    else: print("ERROR: something broke *lenny shrug*")
+    else: print("ERROR: Please send a screenshot of the terminal to theronberg@columbiacabinets.com")
     
 #Loop and Main
 while True:
