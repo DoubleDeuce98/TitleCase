@@ -1,1 +1,8 @@
+#This uses personal info as a test
+#Best to delete when no longer needed
 PhoneFix_Test.txt
+
+#Don't commit Pyinstaller build info etc.
+/dist
+/build
+*.spec
