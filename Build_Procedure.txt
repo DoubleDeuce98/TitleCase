@@ -1,0 +1,3 @@
+Using Pyinstaller to build as a Windows executable
+
+pyinstaller -i %Icon_Name%.ico --onefile %File_Name%.py
