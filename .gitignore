@@ -6,3 +6,7 @@ PhoneFix_Test.txt
 /dist
 /build
 *.spec
+
+#Bugs folder for issues/bugs discovered
+#Will use this folder instead of creating Github issues
+/Bugs
