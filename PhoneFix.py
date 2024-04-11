@@ -9,6 +9,7 @@ def main():
     #Remove obnoxious North American area code
     #Maybe should look into making the area code removable regardless of location
     entry = phone.removeprefix("+1").strip()
+    entry = entry.removeprefix("1-").strip()
 
     #Check if input was only digits and format
     if entry.isalnum():
