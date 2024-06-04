@@ -8,8 +8,8 @@ def main():
 
     #Remove obnoxious North American area code
     #Maybe should look into making the area code removable regardless of location
-    entry = phone.removeprefix("+1").strip()
-    entry = entry.removeprefix("1-").strip()
+    phone = phone.removeprefix("+1").strip()
+    entry = phone.removeprefix("1-").strip()
 
     #Check if input was only digits and format
     if entry.isalnum():
@@ -24,6 +24,7 @@ def main():
         
         elif l > 11:
             print("MORE DIGITS THAN EXPECTED, PLEASE REVIEW OUTPUT:")
+            print()
     
     
         print(""+entry[:3]+"-"+entry[3:6]+"-"+entry[6:])
@@ -55,7 +56,10 @@ def main():
 
 
 #Loop and Main
+print("PhoneFix")
+print("Copyright (C) 2024 Theron Berg. All rights reserved.")
+
 while True:
     main()
-    if input("""Do you want to start again? (Y/N)""").strip().upper() != "Y":
+    if input("""Do you want to start again? (Y/N)""").strip().upper() == "N":
         break

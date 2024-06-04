@@ -18,7 +18,10 @@ def main():
     else: print("ERROR: Please send a screenshot of the terminal to theronberg@columbiacabinets.com")
     
 #Loop and Main
+print("TitleCase")
+print("Copyright (C) 2024 Theron Berg. All rights reserved.")
+
 while True:
     main()
-    if input("""Do you want to start again? (Y/N)""").strip().upper() != "Y":
+    if input("""Do you want to start again? (Y/N)""").strip().upper() == "N":
         break
